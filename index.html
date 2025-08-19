@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DietCraft | Personalized Diet Plans</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">🥗 DietCraft</div>
+    <nav>
+      <a href="#form-section">📋 Get Plan</a>
+      <a href="#results">📅 My Plan</a>
+      <a href="#about">ℹ️ About</a>
+      <a href="#contact">📞 Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Eat Smart, Live Healthy 🍎</h1>
+      <p>Get your 7-day personalized diet plan with detailed recipes for every meal.</p>
+      <a href="#form-section" class="cta-btn">Start Now</a>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form-section">
+      <div class="form-card">
+        <h2>📝 Fill Your Details</h2>
+        <form id="dietForm">
+          <label>Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+
+          <label>Age:</label>
+          <input type="number" id="age" placeholder="Enter your age" required>
+
+          <label>Goal:</label>
+          <select id="goal" required>
+            <option value="">-- Select Goal --</option>
+            <option value="weight_loss">Weight Loss</option>
+            <option value="muscle_gain">Muscle Gain</option>
+            <option value="healthy">Healthy Lifestyle</option>
+          </select>
+
+          <label>Dietary Restrictions:</label>
+          <select id="restriction" required>
+            <option value="">-- Select Restriction --</option>
+            <option value="none">None</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten_free">Gluten Free</option>
+          </select>
+
+          <button type="submit">Generate Plan</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results">
+      <div id="result"></div>
+      <button id="downloadBtn">📥 Download as PDF</button>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About DietCraft</h2>
+      <p>
+        DietCraft helps you design a weekly balanced diet tailored to your goals 
+        and restrictions. Each meal comes with detailed recipes so you can cook easily.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>📧 Email: <a href="mailto:gundakavyasree17@gmail.com">gundakavyasree17@gmail.com</a></p>
+      <p>🌐 GitHub: <a href="https://github.com/kavyasree17" target="_blank">github.com/kavyasree17</a></p>
+      <p>💼 LinkedIn: <a href="https://linkedin.com/in/gunda-kavya-sree-172a4a366" target="_blank">linkedin.com/in/gunda-kavya-sree-172a4a366</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 DietCraft | Designed by Gunda Kavya Sree</p>
+    </footer>
+
+  </main>
+
+  <!-- Recipe Modal -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="recipeTitle"></h2>
+      <h3>Ingredients:</h3>
+      <ul id="recipeIngredients"></ul>
+      <h3>Instructions:</h3>
+      <ol id="recipeInstructions"></ol>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
